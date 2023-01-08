@@ -6,7 +6,7 @@ import Message from "../common/Message";
 import TextInput from "../common/TextInput";
 import { useParams } from "react-router-dom";
 
-const socket = io("http://localhost:7373");
+const socket = io("https://public-chat-server.onrender.com");
 
 function ChatScreen() {
   const [messages, setMessages] = useState([]);
