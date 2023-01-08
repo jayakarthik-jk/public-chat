@@ -1,0 +1,241 @@
+:root {
+  --primary: #0b1c48;
+  --secondary: #e50027;
+  --grey: #999;
+  --white: #fff;
+  --black: #000;
+  --background: #242424;
+  --green: #1ddc86;
+  --blue: #268ab7;
+  --pink: #b02144;
+  --gradient: linear-gradient(
+    to top right,
+    var(--green),
+    var(--blue),
+    var(--pink)
+  );
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: var(--background);
+  height: 100vh;
+  min-width: 200px;
+  color: var(--white);
+  overflow: hidden;
+  background-image: url(./assets/doodle_wallpaper.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  height: 70vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 50px 10px calc(5% + 60px) 10px;
+  display: flex;
+  flex-direction: column;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+.message-container {
+  position: relative;
+  display: flex;
+  margin: 1px 0;
+}
+
+.message-content {
+  max-width: 75%;
+  border-radius: 5px;
+  border-radius: 10px;
+  margin: 0 10px;
+  padding: 5px;
+  color: var(--white);
+  font-size: medium;
+}
+
+.left-message-content {
+  border: 2px solid var(--secondary);
+  background: var(--secondary);
+  border-top-left-radius: 0;
+}
+
+.right-message-content {
+  margin-left: auto;
+  border: 2px solid var(--primary);
+  background: var(--primary);
+  border-top-left-radius: 10;
+  border-top-right-radius: 0;
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.arrow.left {
+  left: 0;
+  rotate: 90deg;
+}
+
+.arrow.left:after {
+  content: "";
+  background: var(--secondary);
+  width: 142%;
+  height: 142%;
+  position: absolute;
+  transform: rotate(45deg) translate(-71%, 0);
+}
+
+.arrow.right {
+  right: 0;
+}
+
+.arrow.right:after {
+  content: "";
+  background: var(--primary);
+  width: 142%;
+  height: 142%;
+  position: absolute;
+  transform: rotate(45deg) translate(-71%, 0);
+}
+
+.message-username {
+  color: var(--grey);
+  font-size: smaller;
+}
+
+.message-time {
+  font-size: x-small;
+  align-self: flex-end;
+  padding-left: 10px;
+  color: var(--grey);
+}
+
+.input-container {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#inputText {
+  width: 80%;
+  height: 40px;
+  border: none;
+  outline: none;
+  padding: 0 20px;
+  border-radius: 25px;
+  font-size: large;
+}
+
+.input-btn {
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  right: calc(10% - 25px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  color: var(--white);
+  background: var(--primary);
+}
+
+.login-screen {
+  background: var(--background);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./assets/doodle_wallpaper.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login-container {
+  width: 60vw;
+  background-image: var(--gradient);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: var(--black) 5px 5px 20px;
+}
+
+.login-text {
+  font-weight: bold;
+  font-size: larger;
+  margin: 0px 0px 20px;
+}
+
+.login-elements {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.login-input {
+  padding: 0 20px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  height: 40px;
+  width: 80%;
+  font-size: larger;
+}
+
+.login-btn {
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  background: var(--primary);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: calc(10% - 25px);
+}
+
+.login-terms {
+  display: flex;
+  justify-content: end;
+  margin: 20px 5px 0;
+}
+
+.new-user-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.new-user {
+  color: var(--white);
+  padding: 5px 30px;
+  border: 1px solid var(--grey);
+  border-radius: 25px;
+}
+
+/*# sourceMappingURL=index.css.map */
